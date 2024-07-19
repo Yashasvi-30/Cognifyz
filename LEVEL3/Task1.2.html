@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .contact-us {
+           
+            bottom: 50px;
+            width: 100%;
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px 0;
+            
+        }
+
+        .contact-us form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-us input, .contact-us textarea {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-us button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-us button:hover {
+            background-color: #555;
+        }
+
+        .content {
+            margin-top: 60px;
+            margin-bottom: 150px; /* Adjusted to accommodate the contact-us section */
+            padding: 20px;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Image Slideshow</h1>
+    </header>
+
+    <div class="content">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="../LEVEL3/images/A1.png" alt="Image 1" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="../LEVEL3/images/A2.png" alt="Image 2" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="../LEVEL3/images/A3.png" alt="Image 3" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="../LEVEL3/images/A4.png" alt="Image 4" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="../LEVEL3/images/A5.png" alt="Image 5" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="../LEVEL3/images/A6.png" alt="Image 6" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="../LEVEL3/images/A7.png" alt="Image 7" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="../LEVEL3/images/A8.png" alt="Image 8" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="../LEVEL3/images/A9.png" alt="Image 9" style="width:100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-us">
+        <p>Contact Us</p>
+        <form>
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <textarea name="comment" placeholder="Enter your comment" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Yashasvi</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
+</body>
+</html>
