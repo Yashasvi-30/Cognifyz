@@ -1,0 +1,29 @@
+Level 2
+
+Task 1
+
+Front-end Frameworks:
+
+Use a front-end framework like Bulma
+or UIKit to create a responsive card
+component with an image and text.
+
+Implement a basic responsive grid
+layout using a front-end framework
+like Bootstrap or Foundation.
+
+Level 2
+
+Task 2
+
+Responsive Design:
+
+Convert a basic webpage into a
+responsive design that adapts to
+different screen sizes using CSS media
+queries.
+
+Create a mobile-friendly navigation
+menu that collapses into a hamburger
+menu on smaller screens using HTML
+and CSS.
