@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Stylish Web Page</title>
+    <title>Simple Webpage</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,56 +14,62 @@
             flex-direction: column;
             align-items: center;
         }
-        .header, .footer {
-            width: 100%;
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-        }
         .container {
             width: 80%;
-            max-width: 1200px;
+            max-width: 800px;
             margin: 20px 0;
             padding: 20px;
             background: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
-        .section {
-            margin: 20px 0;
-            padding: 20px;
-            border: 1px solid #ddd;
+        .nav {
+            width: 100%;
+            background-color: #333;
+        }
+        .nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .nav li {
+            float: left;
+        }
+        .nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .nav li a:hover {
+            background-color: #111;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
             border-radius: 8px;
         }
-        .button-section button {
-            padding: 10px 20px;
-            font-size: 16px;
-            margin: 5px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        .form-section {
+            margin-top: 20px;
         }
-        .alternate-color {
-            background-color: #008cba;
-            color: #fff;
-        }
-        .random-color {
-            background-color: #e91e63;
-            color: #fff;
-        }
-        .name-color {
-            background-color: #4caf50;
-            color: #fff;
-        }
-        .calculator input, .calculator select {
-            margin: 5px;
+        .form-section input[type="text"] {
+            width: calc(100% - 22px);
             padding: 10px;
-            font-size: 16px;
+            margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 16px;
         }
-        .calculator button {
+        .form-section button {
             padding: 10px 20px;
             font-size: 16px;
             background-color: #4CAF50;
@@ -72,153 +78,30 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .calculator button:hover {
+        .form-section button:hover {
             background-color: #45a049;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .contact-form button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #008cba;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background-color: #005f5f;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Welcome to My Stylish Web Page</h1>
+    <div class="nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </div>
     <div class="container">
-        <!-- Button Section -->
-        <div class="section button-section">
-            <h2>Color Changing Buttons</h2>
-            <button class="alternate-color" id="alternateColorButton">Alternate Color Change</button>
-            <button class="random-color" id="randomColorButton">Random Color Change</button>
-            <input type="text" id="colorInput" placeholder="Enter color name">
-            <button class="name-color" id="nameColorButton">Change to Entered Color</button>
-        </div>
-
-        <!-- Alert Section -->
-        <div class="section alert-section">
-            <h2>Greeting </h2>
-            <button onclick="displayGreeting()">Show Greeting</button>
-        </div>
-
-        <!-- Calculator Section -->
-        <div class="section calculator-section">
-            <h2> Calculator</h2>
-            <div class="calculator">
-                <input type="number" id="num1" placeholder="Enter first number">
-                <input type="number" id="num2" placeholder="Enter second number">
-                <select id="operation">
-                    <option value="add">Add</option>
-                    <option value="subtract">Subtract</option>
-                    <option value="multiply">Multiply</option>
-                    <option value="divide">Divide</option>
-                </select>
-                <button onclick="calculate()">Calculate</button>
-                <p id="result"></p>
-            </div>
-        </div>
-
-        <!-- Contact Us Section -->
-        <div class="section contact-section">
-            <h2>Contact Us</h2>
-            <form class="contact-form">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
-                <button type="submit" onclick="submitContactForm(event)">Submit</button>
+        <h1>Welcome to My Simple Webpage</h1>
+        <p>This is a simple webpage with a heading, a paragraph, and an image. Below, you'll also find a basic form and a navigation menu with three links.</p>
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/1a3597165777983.Y3JvcCwyNjg4LDIxMDIsMCwyNDY.jpg" alt="Placeholder Image">
+        <div class="form-section">
+            <h2>Subscribe to our Newsletter</h2>
+            <form>
+                <input type="text" id="email" name="email" placeholder="Enter your email">
+                <button type="submit">Submit</button>
             </form>
         </div>
     </div>
-    <div class="footer">
-        <p>&copy; 2024 My Stylish Web Page. All rights reserved.</p>
-    </div>
-
-    <script>
-        // Alternate Color Change
-        let alternate = false;
-        document.getElementById('alternateColorButton').addEventListener('click', function() {
-            this.style.backgroundColor = alternate ? '#008cba' : '#f44336';
-            alternate = !alternate;
-        });
-
-        // Random Color Change
-        document.getElementById('randomColorButton').addEventListener('click', function() {
-            this.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-        });
-
-        // Change to Entered Color
-        document.getElementById('nameColorButton').addEventListener('click', function() {
-            const color = document.getElementById('colorInput').value;
-            this.style.backgroundColor = color;
-        });
-
-        // Greeting Alert
-        function displayGreeting() {
-            let currentHour = new Date().getHours();
-            let greeting;
-
-            if (currentHour < 12) {
-                greeting = "Good Morning! Have a wonderful day ahead!";
-            } else if (currentHour < 18) {
-                greeting = "Good Afternoon! Hope you're having a great day!";
-            } else {
-                greeting = "Good Evening! Enjoy your evening!";
-            }
-
-            alert(greeting);
-        }
-
-        // Enhanced Calculator
-        function calculate() {
-            let num1 = parseFloat(document.getElementById('num1').value);
-            let num2 = parseFloat(document.getElementById('num2').value);
-            let operation = document.getElementById('operation').value;
-            let result;
-
-            switch(operation) {
-                case 'add':
-                    result = num1 + num2;
-                    break;
-                case 'subtract':
-                    result = num1 - num2;
-                    break;
-                case 'multiply':
-                    result = num1 * num2;
-                    break;
-                case 'divide':
-                    result = num1 / num2;
-                    break;
-                default:
-                    result = 'Invalid operation';
-            }
-
-            document.getElementById('result').textContent = "Result: " + result;
-        }
-
-        // Contact Form Submission
-        function submitContactForm(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            alert(`Thank you, ${name}! We have received your message: "${message}". We will contact you at ${email}.`);
-        }
-    </script>
 </body>
 </html>
